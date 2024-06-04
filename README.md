@@ -28,17 +28,19 @@ The YouTube Auto Pause Extension is a Chrome extension that automatically pauses
 - `manifest.json`: The manifest file that provides Chrome with information about the extension.
 - `content.js`: The content script that interacts with the YouTube video player.
 - `background.js`: The background script that listens for window focus events and sends messages to the content script.
-
+- `popup.html` : The HTML file for the extension's popup.
+- `popup.js`: The script that handles the popup's functionality.
 ## Code Details
 ### manifest.json
 ```json
 {
   "manifest_version": 3,
   "name": "YouTube Auto Pause",
-  "version": "1.0",
+  "version": "1.1",
   "description": "Automatically pauses and resumes YouTube videos when switching windows.",
   "permissions": [
-    "tabs"
+    "tabs",
+    "storage"
   ],
   "content_scripts": [
     {
@@ -48,5 +50,13 @@ The YouTube Auto Pause Extension is a Chrome extension that automatically pauses
   ],
   "background": {
     "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
   }
 }
