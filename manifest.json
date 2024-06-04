@@ -1,0 +1,19 @@
+{
+    "manifest_version": 3,
+    "name": "YouTube Auto Pause",
+    "version": "1.0",
+    "description": "Automatically pauses and resumes YouTube videos when switching windows.",
+    "permissions": [
+      "tabs"
+    ],
+    "content_scripts": [
+      {
+        "matches": ["*://www.youtube.com/*"],
+        "js": ["content.js"]
+      }
+    ],
+    "background": {
+      "service_worker": "background.js"
+    }
+  }
+  
