@@ -7,6 +7,7 @@ The YouTube Auto Pause Extension is a Chrome extension that automatically pauses
 ## Features
 - Automatically pauses YouTube videos when the Chrome window loses focus.
 - Automatically resumes YouTube videos when the Chrome window gains focus.
+- Ability to pause/resume the extension via a popup.
 
 
 ## Installation
